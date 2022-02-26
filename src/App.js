@@ -1,7 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 
+function Hola(props) {
+  return (
+    <div>
+      <h1>Hola Mundo</h1>
+      <p>Que tal, {props.nombre}, {props.apellido}</p>
+    </div>
+  );
+}
+
 function App() {
+  const nombre = 'Paco'
+  const apellido = 'Perez'
   return (
     <div className="App">
       <header className="App-header">
@@ -15,9 +26,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React - Hola mundo
         </a>
       </header>
+      <Hola nombre={nombre} apellido={apellido}/>
+      <Hola nombre="Pepito" apellido="González"/>
     </div>
   );
 }
