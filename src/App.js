@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Hello from './components/Hello/hello.jsx';
+import Hello2 from './components/Hello2/hello2.jsx';
 
 function Hola(props) {
   return (
@@ -15,22 +17,10 @@ function App() {
   const apellido = 'Perez'
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React - Hola mundo
-        </a>
-      </header>
       <Hola nombre={nombre} apellido={apellido}/>
       <Hola nombre="Pepito" apellido="González"/>
+      <Hello nombre={nombre} apellido={apellido}/>
+      <Hello2 nombre="Esteban" apellido="Corral"/>
     </div>
   );
 }
